@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Notes</title>
+</head>
+<body>
+    <h1>My Sticky Notes</h1>
+    <ul>
+        {% for note in notes %}
+            <li><strong>{{ note.title }}</strong>: {{ note.content }}</li>
+        {% empty %}
+            <li>No notes yet!</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

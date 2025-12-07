@@ -1,0 +1,32 @@
+/* General page styling */
+body {
+    background-color: #fdf6e3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sticky note card style */
+.sticky-note {
+    background: #fff9c4;
+    border: 1px solid #f0e68c;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sticky-note:hover {
+    transform: scale(1.03);
+}
+
+/* Note title */
+.sticky-note h5 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Buttons */
+.btn-custom {
+    margin-right: 5px;
+}

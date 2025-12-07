@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}Sticky Notes{% endblock title %}
+    </title>
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="{% static 'notes/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-4">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <a class="navbar-brand" href="{% url 'note_list' %}">Sticky Notes</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'note_create' %}">+ Add Note</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        {% block content %}
+        <!-- Child templates will inject content here -->
+        {% endblock content %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-4">
+        <hr>
+        <p>&copy; 2025 Sticky Notes App</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
