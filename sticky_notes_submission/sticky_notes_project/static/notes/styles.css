@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.note-card {
+    background: #fff8a6;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transform: rotate(-1deg);
+}
+
+.note-card h3 {
+    margin-top: 0;
+}
+
+.note-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-create,
+.btn-edit,
+.btn-delete,
+.btn-save,
+.btn-back {
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-create { background: #4caf50; }
+.btn-edit { background: #2196f3; }
+.btn-delete { background: #f44336; }
+.btn-save { background: #4caf50; }
+.btn-back { background: #555; }

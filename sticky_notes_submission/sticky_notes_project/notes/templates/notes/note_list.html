@@ -1,0 +1,29 @@
+{% extends 'notes/base.html' %}
+
+{% block title %}All Notes{% endblock %}
+
+{% block content %}
+<h2>Your Notes</h2>
+
+<a href="{% url 'note_create' %}" class="btn-create">+ Add Note</a>
+
+<div class="notes-grid">
+    {% for note in notes %}
+        <div class="note-card">
+            <h3>{{ note.title }}</h3>
+            <p>{{ note.content }}</p>
+
+            <div class="note-actions">
+                <a href="{% url 'note_update' note.pk %}" class="btn-edit">Edit</a>
+
+                <form action="{% url 'note_delete' note.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-delete">Delete</button>
+                </form>
+            </div>
+        </div>
+    {% empty %}
+        <p>No notes yet. Create your first one!</p>
+    {% endfor %}
+</div>
+{% endblock %}
